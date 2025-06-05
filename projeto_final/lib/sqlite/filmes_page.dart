@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'db_helper.dart';
+import '../helpers/db_helper.dart';
 import 'filme.dart';
 
 class FilmesPage extends StatefulWidget {
+  const FilmesPage({super.key});
+
   @override
   _FilmesPageState createState() => _FilmesPageState();
 }

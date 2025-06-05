@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'db_helper.dart';
+import '../helpers/db_helper.dart';
 
 class ListaFilmes extends StatelessWidget {
+  const ListaFilmes({super.key});
+
   Future<List<Map<String, dynamic>>> _carregarFilmes() async {
     return await DBHelper.listarFilmes();
   }

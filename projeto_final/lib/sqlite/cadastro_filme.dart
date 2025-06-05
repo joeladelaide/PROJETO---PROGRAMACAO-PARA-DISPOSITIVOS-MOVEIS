@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'db_helper.dart';
+import '../helpers/db_helper.dart';
 
 class CadastroFilme extends StatefulWidget {
+  const CadastroFilme({super.key});
+
   @override
   _CadastroFilmeState createState() => _CadastroFilmeState();
 }

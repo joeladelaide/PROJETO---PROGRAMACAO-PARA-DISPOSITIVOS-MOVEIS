@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 // Importa o pacote externo responsável por exibir classificações com estrelas
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
+import 'helpers/db_helper.dart';
+
 // Função principal que inicializa o aplicativo Flutter
 void main() {
   // Garante que a ligação com o sistema esteja preparada antes de executar o app
@@ -13,6 +15,8 @@ void main() {
 
 // Classe principal do aplicativo, que define a estrutura base do app
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -33,7 +37,7 @@ class MyApp extends StatelessWidget {
       // Título do aplicativo (usado internamente, ex: multitarefa)
       title: 'Gerenciador de Filmes',
       // Define a primeira tela exibida ao abrir o app
-      home: HomePage(),
+      home: FilmesPage(),
     );
   }
 }
@@ -66,6 +70,8 @@ class Filme {
 
 // Tela principal que lista os filmes
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   _HomePageState createState() => _HomePageState(); // Cria o estado associado
 }
@@ -273,7 +279,7 @@ class _HomePageState extends State<HomePage> {
 
 class FormularioFilmePage extends StatefulWidget {
   final Filme? filme;
-  FormularioFilmePage({this.filme});
+  const FormularioFilmePage({super.key, this.filme});
 
   @override
   _FormularioFilmePageState createState() => _FormularioFilmePageState();
@@ -445,7 +451,7 @@ class DetalhesFilmePage extends StatelessWidget {
   final Filme filme; // Objeto filme passado como parâmetro para a tela
 
   // Construtor da tela, que recebe o filme como argumento obrigatório
-  DetalhesFilmePage({required this.filme});
+  const DetalhesFilmePage({super.key, required this.filme});
 
   @override
   Widget build(BuildContext context) {
