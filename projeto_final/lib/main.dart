@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
       pontuacao: 4.0,
       descricao:
           'Harry é misteriosamente selecionado para participar do Torneio Tribruxo.',
-      ano: '2005',a
+      ano: '2005',
       imagemUrl:
           'https://upload.wikimedia.org/wikipedia/pt/7/7b/Harry_Potter_C%C3%A1lice_Fogo_2004.jpg',
     ),
