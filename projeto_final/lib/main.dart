@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 // Importa o pacote externo responsável por exibir classificações com estrelas
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import 'helpers/db_helper.dart';
 
 // Função principal que inicializa o aplicativo Flutter
 void main() {
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
       // Título do aplicativo (usado internamente, ex: multitarefa)
       title: 'Gerenciador de Filmes',
       // Define a primeira tela exibida ao abrir o app
-      home: FilmesPage(),
+      home: HomePage(),
     );
   }
 }
@@ -78,7 +77,9 @@ class HomePage extends StatefulWidget {
 
 // Classe de estado da HomePage, responsável por armazenar e manipular os dados da tela
 class _HomePageState extends State<HomePage> {
-  // Lista inicial de filmes cadastrados manualmente
+// ...existing code...
+// ...existing code...
+
   List<Filme> filmes = [
     Filme(
       id: 1,
